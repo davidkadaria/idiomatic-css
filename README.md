@@ -65,6 +65,8 @@ contribute.
 <a name="whitespace"></a>
 ## 2. Whitespace
 
+## 2. ინტერვალი
+
 Only one style should exist across the entire source of your code-base. Always
 be consistent in your use of whitespace. Use whitespace to improve
 readability.
