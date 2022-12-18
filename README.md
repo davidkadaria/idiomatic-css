@@ -35,10 +35,17 @@ contribute.
 <a name="general-principles"></a>
 ## 1. General principles
 
+## 1. ზოგადი პრინციპები
+
 > "Part of being a good steward to a successful project is realizing that
 > writing code for yourself is a Bad Idea™. If thousands of people are using
 > your code, then write your code for maximum clarity, not your personal
 > preference of how to get clever within the spec." - Idan Gazit
+
+> „იმის გაცნობიერება, რომ კოდის საკუთარი თავისთვის წერა ცუდი იდეაა™, წარმატებული პროექტის
+> კარგ განმკარგულებლად ყოფნის ნაწილია. თუკი ათასობით ადამიანი იყენებს თქვენს კოდს,
+> დაწერეთ კოდი რაც შეიძლება ნათლად და ნუ გააკეთებთ რამეს მხოლოდ იმიტომ, რომ ენის
+> სპეციფიკაცია ამის საშუალებას იძლევა.“ — აიდან გაზიტი
 
 * Don't try to prematurely optimize your code; keep it readable and
   understandable.
