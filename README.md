@@ -112,7 +112,14 @@ how they work, their limitations, and the way they are constructed. Don't leave
 others in the team guessing as to the purpose of uncommon or non-obvious
 code.
 
+კოდის სწორად კომენტირება უაღრესად მნიშვნელოვანია. დაუთმეთ დრო კომპონენტების აღწერას:
+როგორ მუშაობენ, რა შეზღუდვები აქვთ და როგორ არიან აგებული.
+ნუ ჩააგდებთ გუნდის სხვა წევრებს საგონებელში, დაადგინონ,
+რა არის უჩვეულო ან ბუნდოვანი კოდის დანიშნულება.
+
 Comment style should be simple and consistent within a single code base.
+
+კომენტარების ჩაწერის სტილი უნდა იყოს მარტივი და ურთიერთშეთანხმებული მთელი პროექტის მასშტაბით.
 
 * Place comments on a new line above their subject.
 * Keep line-length to a sensible maximum, e.g., 80 columns.
