@@ -323,9 +323,15 @@ alphabetical ordering.
 
 #### Exceptions and slight deviations
 
+#### გამონაკლისები და მცირედი გადახვევები
+
 Large blocks of single declarations can use a slightly different, single-line
 format. In this case, a space should be included after the opening brace and
 before the closing brace.
+
+ერთი დეკლარაციისგან შემდგარი დიდი ბლოკებისთვის შეიძლება გამოყენებულ იქნეს ოდნავ განსხვავებული, ერთხაზიანი
+ფორმატი. ამ შემთხვევაში, ინტერვალი გამხსნელი ფრჩხილის შემდეგ და დამხურავი ფრჩხილის წინ უნდა
+განთავსდეს.
 
 ```css
 .selector-1 { width: 10%; }
@@ -337,6 +343,11 @@ Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
 readability and produce more useful diffs. There are various formats that could
 be used; one example is shown below.
+
+გრძელი, მძიმით გამოყოფილი თვისებათა მნიშვნელობები — როგორიცაა გრადიენტთა ან ჩრდილთა
+კრებული — შეიძლება განლაგებულ იქნეს მრავალ სტრიქონზე, რათა გაუმჯობესდეს
+წაკითხვადობა და წარმოიქმნას მეტად გამოსადეგი diff-ები. არსებობს სხვადასხვა ჩაწერის ფორმატები;
+ერთ-ერთი ვარიანტი ქვემოთ არის მოცემული.
 
 ```css
 .selector {
@@ -350,6 +361,8 @@ be used; one example is shown below.
 ```
 
 ### Preprocessors: additional format considerations
+
+### პრეპროცესორები: დამატებითი მოსაზრებები ფორმატირებაზე
 
 Different CSS preprocessors have different features, functionality, and syntax.
 Your conventions should be extended to accommodate the particularities of any
