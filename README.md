@@ -205,6 +205,10 @@ The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
 in useful diffs and blames.
 
+თქვენ მიერ შერჩეული კოდის ჩაწერის ფორმატი უნდა იძლეოდეს გარანტიას, რომ კოდი არის
+მარტივად წაკითხვადი, შედგება მარტივად გასაგები კომენტარებისგან, მინიმუმამდე ამცირებს
+შეცდომების დაშვების შანსს და იძლევა გამოსადეგ შეტყობინებებს ვერსიების კონტროლის კონტექსტში.
+
 * Use one discrete selector per line in multi-selector rulesets.
 * Include a single space before the opening brace of a ruleset.
 * Include one declaration per line in a declaration block.
@@ -222,6 +226,24 @@ in useful diffs and blames.
 * Place the closing brace of a ruleset in the same column as the first
   character of the ruleset.
 * Separate each ruleset by a blank line.
+
+* რამდენიმე სელექტორისგან შემდგარი წესების ნაკრების ჩაწერისას, ყოველი ცალკეული სელექტორი განათავსეთ ცალკე ხაზზე.
+* წესების ნაკრების გამხსნელი ფიგურული ფრჩხილის წინ განათავსეთ ერთი ინტერვალი.
+* დეკლარაციათა ბლოკში შემავალი ყოველი დეკლარაცია განათავსეთ ცალკე ხაზზე.
+* თითოეული დეკლარაციისთვის გამოიყენეთ ერთდონიანი აბზაცი (_ერთი ტაბი_).
+* დეკლარაციაში, ორწერტილის შემდეგ განათავსეთ ერთი ინტერვალი.
+* გამოიყენეთ პატარა ასოებით ჩაწერილი შემოკლებული თექვსმეტობითი მნიშვნელობები. მაგალითად: `#aaa`.
+* მუდმივად გამოიყენეთ ერთმაგი ან ორმაგი ბრჭყალები (_ნუ მოახდენთ მათ შერევას_). სასურველია ორმაგი ბრჭყალების გამოყენება,
+  მაგალითად: `content: ""`.
+* სელექტორებში, ატრიბუტების მნიშვნელობები ჩასვით ბრჭყალებში. მაგალითად: `input[type="checkbox"]`.
+* _დასაშვებ შემთხვევებში_, მოერიდეთ ნულოვანი მნიშვნელობებისათვის ერთეულების განსაზღვრას. მაგალითად: `margin: 0`.
+* მძიმით გამოყოფილ თვისებათა ან ფუნქციათა მნიშვნელობებში,
+  ყოველი მძიმის შემდეგ განათავსეთ ერთი ინტერვალი.
+* დეკლარაციათა ბლოკის უკანასკნელი დეკლარაციის ბოლოში(_ც_) განათავსეთ
+  წერტილ-მძიმე.
+* წესების ნაკრების დამხურავი ფრჩხილი განათავსეთ იმავე სვეტზე, რომელზედაც წესების ნაკრების პირველი
+  სიმბოლოა განთავსებული.
+* გამოყავით წესების თითოეული ნაკრები ცარიელი ხაზით.
 
 ```css
 .selector-1,
@@ -245,15 +267,24 @@ in useful diffs and blames.
 
 #### Declaration order
 
+#### დეკლარაციათა თანამიმდევრობა
+
 If declarations are to be consistently ordered, it should be in accordance with
 a single, simple principle.
+
+თუ საჭიროა დეკლარაციების თანამიმდევრობით დალაგება, ეს უნდა მოხდეს ერთი მარტივი
+პრინციპის შესაბამისად.
 
 Smaller teams may prefer to cluster related properties (e.g. positioning and
 box-model) together.
 
+შედარებით პატარა გუნდებმა შესაძლოა უპირატესობა მიანიჭონ ურთიერთდაკავშირებულ თვისებათა (მაგ. პოზიციონირება და ბლოკის მოდელი (_box-model_)) ერთად თავმოყრას.
+
 ```css
 .selector {
     /* Positioning */
+
+    /* პოზიციონირება */
     position: absolute;
     z-index: 10;
     top: 0;
@@ -262,6 +293,8 @@ box-model) together.
     left: 0;
 
     /* Display & Box Model */
+
+    /* ვიზუალიზაცია (Display) და ბლოკის მოდელი */
     display: inline-block;
     overflow: hidden;
     box-sizing: border-box;
@@ -272,6 +305,8 @@ box-model) together.
     margin: 10px;
 
     /* Other */
+
+    /* სხვა */
     background: #000;
     color: #fff;
     font-family: sans-serif;
@@ -282,6 +317,9 @@ box-model) together.
 
 Larger teams may prefer the simplicity and ease-of-maintenance that comes with
 alphabetical ordering.
+
+უფრო დიდმა გუნდებმა კი შესაძლოა სიმარტივესა და მოხერხებულად მოვლის შესაძლებლობაზე გააკეთონ არჩევანი,
+რაც ანბანური თანამიმდევრობით დალაგების პრინციპისთვის არის დამახასიათებელია.
 
 #### Exceptions and slight deviations
 
