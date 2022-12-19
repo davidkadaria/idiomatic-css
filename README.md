@@ -199,6 +199,8 @@ Example:
 <a name="format"></a>
 ## 4. Format
 
+## 4. ფორმატირება
+
 The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
 in useful diffs and blames.
