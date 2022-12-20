@@ -369,7 +369,8 @@ Your conventions should be extended to accommodate the particularities of any
 preprocessor in use. The following guidelines are in reference to Sass.
 
 სხვადასხვა CSS-პრეპროცესორს განსხვავებული ფუნქციონალი და სინტაქსი აქვს.
-
+თქვენი მიდგომები უნდა მოერგოს თქენ მიერ გამოყენებული ამა თუ იმ პრეპროცესორის
+თავისებურებებს. ქვემოთ მოცემული მითითებები Sass-ზე ვრცელდება.
 
 * Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
   This prevents overly-specific CSS selectors.
@@ -384,6 +385,19 @@ preprocessor in use. The following guidelines are in reference to Sass.
   helps to avoid any potential to confuse your function with a native CSS
   function, or to clash with functions from libraries.
 
+* შეზღუდეთ (სელექტორთა) ჩადგმის სიღრმე ერთამდე. მოახდინეთ კოდის ნებისმიერი ფრაგმენტის გადაფასება,
+  სადაც ჩადგმის სიღრმე ერთს აღემატება. ეს ზედმეტად სპეციფიკური CSS-სელექტორების აღმოფხვრას შეუწყობს ხელს.
+* მოერიდეთ ჩადგმული წესის დეკლარაციების დიდი რაოდენობით გამოყენებას. როგორც კი შეატყობთ,
+  რომ ისინი წაკითხვადობაზე ცუდად ზემოქმედებენ, დაყავით ისინი პატარა, ლოგიკურ ფრაგმენტებად.
+  უმჯობესია, ჩადგმული კოდი ვრცელდებოდეს არაუმეტეს 20 ხაზის მასშტაბით.
+* `@extend` განცხადებები ყოველთვის განათავსეთ დეკლარაციის ბლოკის პირველ
+  ხაზებში.
+* სადაც ამის შესაძლებლობა გექნებათ, `@include` განცხადებებს თავი მოუყარეთ დეკლარაციის ბლოკის პირველ ხაზებში,
+  `@extend` განცხადებების შემდეგ.
+* განიხილეთ თქვენ მიერ შექმნილი (_custom_) ფუნქციებისათვის `x-` ან სხვა _namespace_-ის დამატება თავსართის სახით.
+  ეს დაგეხმარებათ თავიდან აირიდოთ ყველანაირი შესაძლებლობა იმისა, რომ თქვენ მიერ შექმნილ და CSS-ში ჩაშენებულ ფუნქციებს შორის, —
+  ასევე თქვენ მიერ შექმნილ და ბიბლიოთეკების მიერ უზრუნველყოფილ ფუნქციებს შორის, — მოხდება კონფლიქტი.
+
 ```scss
 .selector-1 {
     @extend .other-rule;
@@ -391,6 +405,8 @@ preprocessor in use. The following guidelines are in reference to Sass.
     @include box-sizing(border-box);
     width: x-grid-unit(1);
     // other declarations
+
+    // სხვა დეკლარაციები
 }
 ```
 
