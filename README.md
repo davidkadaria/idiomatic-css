@@ -418,9 +418,15 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 An example of various conventions.
 
+რამდენიმე კანონზომიერების მაგალითი.
+
 ```css
 /* ==========================================================================
    Grid layout
+   ========================================================================== */
+
+/* ==========================================================================
+   Grid-აგებულება
    ========================================================================== */
 
 /**
@@ -439,12 +445,37 @@ An example of various conventions.
  */
 
 /**
+ * ჰორიზონტალური სქროლის მქონე სვეტის აგებულება.
+ *
+ * იქმნება სრული სიმაღლის მქონე, შეუფუთავი სვეტების ერთი რიგი,
+ * რომელთა დათვალიერებაც შესაძლებელია ჰორიზონტალურად, კონტეინერის
+ * (ანუ მშობელი ელემენტის) შიგნით.
+ *
+ * HTML-ის ნიმუში:
+ *
+ * <div class="grid">
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
+ * </div>
+ */
+
+/**
  * Grid container
  *
  * Must only contain `.cell` children.
  *
  * 1. Remove inter-cell whitespace
  * 2. Prevent inline-block cells wrapping
+ */
+
+/**
+ * Grid-კონტეინერი:
+ *
+ * უნდა შეიცავდეს მხოლოდ `.cell` შვილობილ ელემენტებს.
+ *
+ * 1. უჯრედთაშორისი სივრცის მოცილება
+ * 2. მწკრივულ უჯრედთა ბლოკის შეფუთვის აღმოფხვრა
  */
 
 .grid {
@@ -463,6 +494,16 @@ An example of various conventions.
  * 3. Reset font-size inherited from `.grid`
  */
 
+/**
+ * Grid-უჯრედები
+ *
+ * ნაგულისხმევად, ზუსტი სიგანე არ არის განსაზღვრული. გავრცობილია `.cell-n` კლასებით.
+ *
+ * 1. უჯრედთაშორისი ინტერვალის განსაზღვრა
+ * 2. `.grid`-ისგან მემკვიდრეობით მიღებული white-space თვისების ხელახლა განსაზღვრა
+ * 3. `.grid`-ისგან მემკვიდრეობით მიღებული font-size თვისების ხელახლა განსაზღვრა
+ */
+
 .cell {
     position: relative;
     display: inline-block;
@@ -478,11 +519,16 @@ An example of various conventions.
 
 /* Cell states */
 
+/* უჯრედის მდგომარეობები/ვარიაციები */
+
 .cell.is-animating {
     background-color: #fffdec;
 }
 
 /* Cell dimensions
+   ========================================================================== */
+
+/* უჯრედის ზომები
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -494,33 +540,14 @@ An example of various conventions.
 /* Cell modifiers
    ========================================================================== */
 
+/* უჯრედის მოდიფიკატორები
+   ========================================================================== */
+
 .cell--detail,
 .cell--important {
     border-width: 4px;
 }
 ```
-
-
-## Translations
-
-* [Bahasa Indonesia](https://github.com/necolas/idiomatic-css/tree/master/translations/id-ID)
-* [Bulgarian](https://github.com/vestimir/idiomatic-css)
-* [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
-* [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
-* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
-* [Español](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
-* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
-* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
-* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
-* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
-* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
-* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
-* [正體中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-TW)
-* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 
 
 <a name="acknowledgements"></a>
