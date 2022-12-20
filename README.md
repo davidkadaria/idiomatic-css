@@ -414,6 +414,8 @@ preprocessor in use. The following guidelines are in reference to Sass.
 <a name="example"></a>
 ## 5. Practical example
 
+## 5. პრაქტიკული მაგალითი
+
 An example of various conventions.
 
 ```css
